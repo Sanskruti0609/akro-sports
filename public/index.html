@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Akro Sports | Football Jerseys &amp; Kits, India</title>
+<meta name="description" content="Akro Sports: football jerseys, retro shirts, kids' kits, training wear and tracksuits. Custom name and number printing. Cash on delivery across India.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="/assets/logo.png">
+<link rel="preload" href="/fonts/barlow-condensed-latin-900-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="ticker" aria-label="Offers"><div class="ticker-track" id="ticker"></div></div>
+
+<header class="nav">
+  <button class="icon-btn burger" id="burger" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></button>
+  <a class="logo" href="#top" aria-label="Akro Sports home"><img src="/assets/logo.png" alt="Akro Sports"></a>
+  <nav class="nav-links" aria-label="Main">
+    <button id="shopBtn" aria-haspopup="true">Shop</button>
+    <a href="#rail">The Rack</a>
+    <a href="#drops">Drops</a>
+    <a href="#archive">Retro</a>
+    <a href="#custom">Custom Kit</a>
+  </nav>
+  <div class="nav-right">
+    <button class="icon-btn" id="cartBtn" aria-label="Open bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<!-- mega menu -->
+<div class="mega" id="mega" role="dialog" aria-label="Shop menu">
+  <button class="icon-btn mega-close" id="megaClose" aria-label="Close menu"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <div class="mega-list disp" id="megaList"></div>
+  <div class="mega-view"><div class="glow" id="megaGlow"></div><div id="megaArt"></div><span class="cap" id="megaCap"></span></div>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="Featured jerseys">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-tag"><span>The Showcase</span><i></i><span id="heroOf">01 / 06</span></div>
+    <div class="hero-ghost disp" id="heroGhost">AKRO</div>
+    <div class="hero-shirt" id="heroShirt"></div>
+    <div class="hero-copy">
+      <span class="eyebrow" id="heroSub"></span>
+      <h1 class="disp" id="heroName"></h1>
+      <p id="heroTag"></p>
+      <div class="hero-meta"><span class="price" id="heroPrice"></span><button class="btn" id="heroBtn">View kit</button></div>
+    </div>
+    <div class="hero-ctrl">
+      <button class="arrow" id="heroPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="hero-count"><svg viewBox="0 0 86 86"><circle class="trk" cx="43" cy="43" r="42"/><circle class="bar" id="heroBar" cx="43" cy="43" r="42"/></svg><span id="heroNum">01</span></div>
+      <button class="arrow" id="heroNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- RAIL -->
+  <section class="sec rail-sec" id="rail">
+    <div class="sec-head">
+      <div><span class="eyebrow">The Rack</span><h2 class="disp" style="margin-top:14px">Off the <span class="serif">peg.</span></h2></div>
+      <div><p>Six shirts on the dressing-room rail. Drag one down to pull it off the peg, or just tap it.</p>
+        <div class="rail-ctrl" style="margin-top:16px"><button class="arrow" id="railPrev" aria-label="Scroll left"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button class="arrow" id="railNext" aria-label="Scroll right"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+    </div>
+    <div class="rail-wrap"><div class="rail-line"></div><div class="rail" id="rail-list"></div></div>
+    <div class="peg-hint"><i></i>Drag a shirt down to pull it off</div>
+  </section>
+
+  <!-- HORIZONTAL DROPS -->
+  <section class="story" id="drops" aria-label="New drops"><div class="story-track" id="storyTrack"></div><div class="story-bar"><i id="storyBar"></i></div></section>
+
+  <!-- SHOP -->
+  <section class="sec" id="shop">
+    <div class="sec-head"><div><span class="eyebrow">The Store</span><h2 class="disp" style="margin-top:14px">Every <span class="serif">kit,</span> one place.</h2></div><p>Jerseys, kits, training wear and jackets, made for Indian pitches and Indian weather.</p></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ARCHIVE -->
+  <section class="sec archive" id="archive">
+    <div class="archive-top"><div class="num disp" id="archNum">3</div><h2 class="disp">retro <span class="serif">shirts,</span><br>straight from the archive.</h2></div>
+    <div class="archive-grid" id="archGrid"></div>
+  </section>
+
+  <!-- CUSTOM BUILDER -->
+  <section class="sec builder" id="custom">
+    <div>
+      <span class="eyebrow">Custom print</span>
+      <h2 class="disp">Your name. <span class="serif">Your number.</span></h2>
+      <p class="lead">Type it, see it on the back instantly. Name and number printing is just <b id="custFee">₹299</b> per shirt. Squads and academies: message us for team rates.</p>
+      <div class="builder-form">
+        <input class="in" id="bName" maxlength="12" placeholder="NAME (max 12)" aria-label="Name on shirt" value="AKRO">
+        <input class="in" id="bNum" maxlength="2" inputmode="numeric" placeholder="No." aria-label="Number" value="10">
+      </div>
+      <div class="field-label"><span>Pick a base shirt</span></div>
+      <div class="swatches" id="swatches"></div>
+      <button class="btn red" id="bAdd">Choose size &amp; add</button>
+    </div>
+    <div class="builder-stage"><div class="glow"></div><div id="bArt"></div></div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="sec voices" id="voices">
+    <span class="eyebrow">Straight from the touchline</span>
+    <h2 class="disp" style="font-size:clamp(50px,8vw,120px)">Worn <span class="serif">by</span> players.</h2>
+    <div class="voice-row" id="voiceRow"></div>
+  </section>
+
+  <!-- CTA / FOOTER -->
+  <footer class="sec cta" id="contact">
+    <span class="eyebrow">Order</span>
+    <h2 class="disp" style="margin-top:14px">Message us,<span class="serif">we deliver</span>to your door.</h2>
+    <p>Pick a shirt, send us the size and your address. Cash on delivery across India, dispatched within a day or two.</p>
+    <div class="cta-btns"><a class="btn red" id="waLink" target="_blank" rel="noopener">WhatsApp us</a><a class="btn" href="#shop">Browse the store</a></div>
+    <div class="foot-grid">
+      <div><h5>On this page</h5><a href="#rail">The Rack</a><a href="#drops">Drops</a><a href="#shop">Store</a><a href="#archive">Retro</a><a href="#custom">Custom kit</a></div>
+      <div><h5>Help</h5><a href="#contact">Shipping &amp; returns</a><a href="#contact">Size guide</a><a href="#contact">Bulk &amp; team orders</a></div>
+      <div><h5>Pay</h5><a href="#contact">UPI &amp; cards</a><a href="#contact">Cash on delivery</a><a href="#contact">WhatsApp order</a></div>
+    </div>
+    <div class="mega-word disp" aria-hidden="true">AKRO SPORTS</div>
+    <div class="copy"><span>© 2026 Akro Sports, India. All rights reserved.</span><span>Original designs. Not affiliated with any club.</span></div>
+  </footer>
+</main>
+
+<!-- spotlight (product) -->
+<div class="spot" id="spot" role="dialog" aria-modal="true" aria-label="Product">
+  <button class="icon-btn spot-close" id="spotClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <div class="spot-stage"><div class="glow" id="spotGlow"></div><div id="spotArt"></div><div class="back-toggle" id="spotToggle" hidden><button class="on" data-v="front">Front</button><button data-v="back">Back print</button></div></div>
+  <div class="spot-panel" id="spotPanel"></div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping bag"></aside>
+<div class="toast" id="toast" role="status"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="wipe" id="wipe"></div>
+
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/jersey.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
